@@ -1,0 +1,18 @@
+String str1="listen";
+    String str2="silent";
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+    if (str1.length() != str2.length()) {
+      System.out.println("Given strings are not anagram.");    }
+    else {
+         char[] arrayOfStr1 = str1.toCharArray();
+      char[] arrayOfStr2 = str2.toCharArray();
+      Arrays.sort(arrayOfStr1);
+      Arrays.sort(arrayOfStr2);
+           if(Arrays.equals(arrayOfStr1, arrayOfStr2) == true) {
+        System.out.println("Given Strings are anagram.");
+      }
+      else {
+        System.out.println("Given Strings are not anagram.");
+      }
+    }

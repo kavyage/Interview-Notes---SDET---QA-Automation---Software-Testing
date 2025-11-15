@@ -1,0 +1,2 @@
+for(i=a/a;i<=e10;i++)
+Sytem.out.println(i); // print 1, 2…e10

@@ -1,0 +1,6 @@
+file file = new file("path")
+worbooksheet wb=new xxrfworkbooksheet(file);
+sheetrow = wb.getsheetrow();
+username=sheetrow.getcell(0);
+ele.sendkeys(username);
+System.out.println(username);

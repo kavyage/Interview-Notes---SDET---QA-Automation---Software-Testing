@@ -1,0 +1,15 @@
+Test Pyramid:
+Shows number of tests at each level
+Base = unit tests, top = UI tests; more unit, fewer UI
+70% unit, 20% integration, 10% UI
+
+Test Strategy:
+High-level testing plan
+Defines approach, scope, types of testing, tools, and framework
+Manual + Automation + Regression approach
+
+Test Plan:
+Detailed document for a project
+Specifies what to test, how, who, when, and entry/exit criteria
+Includes test scope, schedule, resources, test cases, and deliverables
+

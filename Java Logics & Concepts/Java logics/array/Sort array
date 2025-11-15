@@ -1,0 +1,3 @@
+int [] arr = { -1,1,2,-2,3,-3};
+   Arrays.sort(arr);
+[or] bubble sort

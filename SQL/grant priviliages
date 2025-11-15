@@ -1,0 +1,5 @@
+grant priviliages GRANT ALL PRIVILEGES ON * . * TO peter@localhost;  FLUSH PRIVILEGES; SHOW GRANTS for username;
+
+GRANT ALL PRIVILEGES ON my_database.* TO 'peter'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'peter'@'localhost';

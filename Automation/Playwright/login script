@@ -1,0 +1,30 @@
+✅ Preconditions You have Node.js and Playwright installed.
+
+📜 login.spec.js
+const { test, expect } = require('@playwright/test');
+
+test('Login functionality test', async ({ page }) => {
+  // 1. Navigate to the login page
+  await page.goto('https://example.com/login');
+
+  // 2. Fill in the username and password
+  await page.fill('#username', 'myUsername'); // Replace with actual selector & username
+  await page.fill('#password', 'myPassword'); // Replace with actual selector & password
+
+  // 3. Click the submit/login button
+  await page.click('#loginButton'); // Replace with actual selector
+
+  // 4. Validate successful login
+  // Example: Wait for a dashboard element that only appears on successful login
+  const successSelector = '#dashboard'; // Replace with actual element selector that appears after login
+  await expect(page.locator(successSelector)).toBeVisible();
+
+  console.log('✅ Login successful!');
+});
+
+📦 Install Playwright (if not already installed) npm init playwright@latest
+Or install it manually:
+npm install --save-dev @playwright/test
+npx playwright install
+
+▶️ Run the Script  npx playwright test login.spec.js

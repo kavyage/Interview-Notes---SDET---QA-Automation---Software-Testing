@@ -1,0 +1,11 @@
+https://demoqa.com/alerts
+
+Alert alert = driver.switchTo().alert();
+alert.accept(); // Clicks OK
+System.out.println(alert.getText()); // Read alert text
+alert.dismiss(); // Clicks Cancel
+alert.sendKeys("Test Input");
+-----------------------------------------------------------------------------
+
+Q. we can switching iframe tabs to original , but why not in alerts
+Q. handling dynamic popoup

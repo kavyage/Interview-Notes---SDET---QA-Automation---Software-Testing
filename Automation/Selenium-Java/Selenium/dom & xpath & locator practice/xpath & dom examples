@@ -1,0 +1,27 @@
+1. https://the-internet.herokuapp.com/challenging_dom
+find edit hyperlink for the second row
+//table/tbody/tr/td[normalize-space()='Iuvaret1']/following-sibling::td/a[text()="edit"]
+
+
+2. Write a dynamic xpath that would return the capital city corresponding to a country. For example, if I write ‘Afghanistan’ in the xpath, the xpath should return ‘Kabul’; if I write ‘Albania’, it must return ‘Tirana’ and so on. Use the following website URL: https://www.countries-ofthe-world.com/capitals-of-the-world.html
+   import org.openqa.selenium.By;
+   import org.openqa.selenium.WebDriver;
+   import org.openqa.selenium.WebElement;
+   import org.openqa.selenium.chrome.ChromeDriver;
+
+   public class CapitalFinder {
+       public static void main(String[] args) {
+           WebDriver driver = new ChromeDriver();
+           driver.get("https://www.countries-ofthe-world.com/capitals-of-the-world.html");
+
+           String country = "Afghanistan"; // dynamic input
+           String xpath = "//td[text()='" + country + "']/following-sibling::td";
+
+           WebElement capital = driver.findElement(By.xpath(xpath));
+           System.out.println("The capital of " + country + " is " + capital.getText());
+
+           driver.quit();
+       }
+   }
+
+3. xpath for amazon > brands > list > check apple

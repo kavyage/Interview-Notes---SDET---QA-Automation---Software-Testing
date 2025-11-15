@@ -1,0 +1,19 @@
+import java.util.*;
+public class GroupWordsByLength {
+    public static void main(String[] args) {
+
+        String str = "I love automation because it makes life easier"
+        String[] words = str.split(" ");
+        // Map to store <length , list of words>
+        Map<Integer, List<String>> map = new HashMap<>();
+        for (String word : words) {
+            int len = word.length();
+            map.putIfAbsent(len, new ArrayList<>());
+            map.get(len).add(word);
+        }
+        // Print results
+        for (Map.Entry<Integer, List<String>> entry : map.entrySet()) {
+            System.out.println("Length " + entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}

@@ -1,0 +1,23 @@
+1 2 3
+4 5 6
+7 8 9
+1,1 2,2  3,3
+1,3 2,2  3,1
+ // Method to print the main diagonal of a matrix
+    public static void printMainDiagonal(int[][] matrix) {
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        for(int i = 0; i < rows && i < columns; i++) {
+            System.out.print(matrix[i][i] + " ");
+        }
+        System.out.println();
+    }
+
+    // Method to print the secondary diagonal of a matrix
+    public static void printSecondaryDiagonal(int[][] matrix) {
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        for(int i = 0; i < rows && i < columns; i++) {
+            System.out.print(matrix[i][columns - 1 - i] + " ");
+        }
+        System.out.println();

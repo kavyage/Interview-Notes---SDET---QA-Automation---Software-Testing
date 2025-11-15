@@ -1,0 +1,7 @@
+Data Validation – checking row counts, field values, constraints, and sample data.
+
+Functional Validation – verifying that applications or APIs work correctly after migration.
+
+Referential/Dependency Validation – ensuring relationships like foreign keys or hierarchies are intact.
+
+Performance Validation – making sure queries, APIs, or processes run efficiently.

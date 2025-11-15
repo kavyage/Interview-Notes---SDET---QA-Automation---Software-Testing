@@ -1,0 +1,12 @@
+Input --> i have a cat and his name is tom
+Output --> I Have A Cat And His Name Is TOM
+ String s = "i have a cat and his name is tom";
+        String[] w = s.split(" ");
+        for (int i = 0; i < w.length; i++) {
+            w[i] = Character.toUpperCase(w[i].charAt(0)) + w[i].substring(1);
+        }
+        System.out.println(String.join(" ", w));
+split(" ") → breaks the string into words
+Character.toUpperCase(w[i].charAt(0)) → makes the first letter capital
+substring(1) → keeps the rest of the word the same
+String.join(" ", w) → joins the words back into one sentence

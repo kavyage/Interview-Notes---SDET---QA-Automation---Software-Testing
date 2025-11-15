@@ -1,0 +1,29 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+
+public class CheckLinks {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://example.com");
+
+        for (WebElement link : driver.findElements(By.tagName("a"))) {
+            String url = link.getAttribute("href");
+            if (url != null && !url.isEmpty()) {
+                try {
+                    HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                    conn.setRequestMethod("GET");
+                    conn.connect();
+                    System.out.println(url + (conn.getResponseCode() == 200 ? " works" : " is broken"));
+                } catch (Exception e) {
+                    System.out.println(url + " is invalid");
+                }
+            }
+        }
+        driver.quit();
+    }
+}

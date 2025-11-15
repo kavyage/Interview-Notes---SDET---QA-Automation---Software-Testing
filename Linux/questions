@@ -1,0 +1,18 @@
+linux
+- set environment variables export name=value i.e export java_home=path, echo $java_path,
+- unset variablename
+- set - print all variables
+-  how can we see path  echo $path,
+- different types of path relative and absolute,
+-dot is current dir and dot dot is parent dir of curn dir,
+-vi editor  i to insert mode, esc to exit mode, :wq tp save and quit or zz, :w for save
+- script save filename with .sh start script with #!/bin/sh  execute bash filenmae.sh
+- create dir in /temp  mktemp,
+-/ stamds for root,
+-assume there is a file already and execute same filename what happen? updates the last file access time,
+-how can file linked $ln,
+-pid of current prog running backgound  echo "$!"  foo=$!  echo "$foo",
+-status of the command  echo $?,
+- growing log(head/tail)
+*bash
+-which shell working with? echo $shell

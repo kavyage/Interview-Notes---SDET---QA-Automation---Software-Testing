@@ -1,0 +1,33 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import java.util.List;
+
+public class DropdownExample {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://example.com"); // replace with your site
+
+        // Find the dropdown element
+        WebElement dropdown = driver.findElement(By.id("dropdownId")); // replace with actual id
+
+        // Create Select object
+        Select select = new Select(dropdown);
+
+        // Get all options in the dropdown
+        List<WebElement> options = select.getOptions();
+
+        // Print the number of items
+        System.out.println("Number of items in dropdown: " + options.size());
+
+        // Select 5th item (index starts from 0)
+        select.selectByIndex(4);
+
+        // Optional: print selected item
+        System.out.println("Selected item: " + select.getFirstSelectedOption().getText());
+
+        driver.quit();
+    }
+}

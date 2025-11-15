@@ -1,0 +1,5 @@
+String s ="nandi";
+          String r=s.replaceAll("n","");
+          int r1=r.length();
+          int s1=s.length();
+           System.out.println((s1-r1));

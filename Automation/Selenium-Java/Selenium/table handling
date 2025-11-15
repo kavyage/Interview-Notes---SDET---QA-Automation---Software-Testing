@@ -1,0 +1,9 @@
+tr
+td1"
+td2
+td3
+
+list<webelements> list =driver.findelements(by.xpath(//tr//following-sibling::td)
+if(webelement ele : list)
+if(ele.gettext.equals("string")
+assertThat(True);

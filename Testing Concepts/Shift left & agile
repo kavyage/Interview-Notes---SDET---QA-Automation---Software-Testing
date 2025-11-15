@@ -1,0 +1,15 @@
+
+Shift-Left:
+Early defect detection
+Early in SDLC (requirements/design/coding)
+Cheaper and faster to fix defects
+
+Agile:
+Iterative delivery & collaboration
+Throughout each sprint
+Continuous feedback, faster delivery
+
+Relation:
+Agile promotes continuous testing in sprints.
+Shift-Left is an approach used in Agile to move testing earlier.
+They complement each other: Agile is the process, Shift-Left is the testing philosophy.

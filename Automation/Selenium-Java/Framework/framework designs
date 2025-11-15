@@ -1,0 +1,12 @@
+**POM**
+Organize pages + actions
+Clean, maintainable test code
+
+**Page Factory**
+Improved element initialization
+Fast, simple element handling
+
+**Scenario Context - Cucumber BDD**
+Share data between steps
+Steps remain independent and clean
+

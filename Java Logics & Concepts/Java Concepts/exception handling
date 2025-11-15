@@ -1,0 +1,18 @@
+Exception→ An event that disrupts normal flow of execution.
+try→ Block of code where exception might occur.
+catch→ Block to handle the exception.
+finally→ Block that always executes, whether exception occurs or not.
+throw→ Used to explicitly throw an exception.
+throws→ Declares exceptions a method might throw.
+
+ArithmeticException → division by zero
+NullPointerException → using null object
+ArrayIndexOutOfBoundsException → invalid array index
+NumberFormatException → invalid number parsing
+IOException → input/output errors
+
+NoSuchElementException→ 	Element not found on the page
+ElementNotVisibleException→ Element exists but not visible
+TimeoutException→ Wait condition not met in time
+StaleElementReferenceException→ 	Element is no longer attached to DOM
+WebDriverException→ General WebDriver failure

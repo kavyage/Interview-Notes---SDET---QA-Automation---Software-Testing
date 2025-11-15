@@ -1,0 +1,13 @@
+SELECT e.name, d.dept_name
+FROM Employees e
+INNER/LEFT/RIGHT/FULL OUTER(LunionR) JOIN Departments d
+ON e.dept_id = d.dept_id;
+
+SELECT e.name, d.dept_name
+FROM Employees e
+CROSS JOIN Departments d;
+
+SELECT e1.name AS Employee, e2.name AS Manager
+FROM Employees e1
+LEFT(SELF) JOIN Employees e2
+ON e1.manager_id = e2.emp_id;

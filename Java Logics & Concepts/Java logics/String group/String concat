@@ -1,0 +1,2 @@
+string1+string2 ;
+string1.concat(string2).concat(string3);

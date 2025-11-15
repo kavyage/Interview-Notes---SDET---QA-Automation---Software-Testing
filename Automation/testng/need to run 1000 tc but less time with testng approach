@@ -1,0 +1,68 @@
+## 🧩 Use `groups` (recommended for large suites)
+Tag tests by importance or type, then run specific groups.
+
+```java
+@Test(groups = {"smoke"})
+public void loginTest() { ... }
+@Test(groups = {"regression"})
+public void checkoutTest() { ... }
+@Test(groups = {"critical", "sanity"})
+public void paymentTest() { ... }
+```
+
+Then in your **testng.xml**:
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite">
+  <test name="Smoke Tests">
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="critical"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.LoginTests"/>
+      <class name="tests.PaymentTests"/>
+    </classes>
+  </test>
+</suite>
+
+Run only those: mvn test -DsuiteXmlFile=testng.xml
+--------------------------------------------------------------------------------------------------------------------------------
+
+## 🧩 Use `@BeforeGroups` / `@AfterGroups`
+
+You can define setup/teardown logic for certain test groups:
+```java
+@BeforeGroups("critical")
+public void setupCriticalTests() {
+    // setup only for critical tests
+}
+```
+-------------------------------------------------------------------------------------------------------------------------------------
+
+## 🧩 Use Maven or command line filters
+You can run only a certain group dynamically: mvn test -Dgroups="smoke"
+
+Or exclude slow ones: mvn test -DexcludedGroups="slow"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 🧩Combine `priority` + `groups`
+This lets you control both **what to run** and **in what order**.
+```java
+@Test(groups = {"critical"}, priority = 1)
+public void paymentGatewayTest() { ... }
+```
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## ✅ Recommended Strategy (for 1000+ tests)
+
+| Category               | Tag          | Frequency               |
+| ---------------------- | ------------ | ----------------------- |
+| Critical business flow | `critical`   | Run every build         |
+| Sanity checks          | `sanity`     | Run on every deployment |
+| Regression             | `regression` | Run nightly             |
+| Low priority           | `low`        | Run weekly              |
+
+Example: mvn test -Dgroups="critical,sanity"
+

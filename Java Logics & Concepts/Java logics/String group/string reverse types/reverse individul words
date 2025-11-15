@@ -1,0 +1,11 @@
+String s="eswari kavya"; to irawse ayvak
+       String[] words=s.split(" ");
+       String rs="", rw="", word;
+       for(int i=0;i<words.length;i++){
+            word=words[i];
+           for(int j=word.length()-1;j>=0;j--){
+               rw+=word.charAt(j);
+           }
+           rs+=rw+" ";
+                  }
+       System.out.println(rs);

@@ -1,0 +1,53 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+      // ArrayList example
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Orange");
+        System.out.println("ArrayList: " + arrayList);
+
+        // LinkedList example
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(10);
+        linkedList.add(20);
+        linkedList.add(30);
+        System.out.println("LinkedList: " + linkedList);
+
+        // HashMap example
+        HashMap<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("John", 25);
+        hashMap.put("Emily", 30);
+        hashMap.put("Tom", 35);
+        System.out.println("HashMap: " + hashMap);
+
+        // HashSet example
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("Red");
+        hashSet.add("Green");
+        hashSet.add("Blue");
+        System.out.println("HashSet: " + hashSet);
+
+        // TreeSet example
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        treeSet.add(5);
+        treeSet.add(10);
+        treeSet.add(3);
+        System.out.println("TreeSet: " + treeSet);
+
+        // Stack example
+        Stack<String> stack = new Stack<>();
+        stack.push("One");
+        stack.push("Two");
+        stack.push("Three");
+        System.out.println("Stack: " + stack);
+
+        // Queue example
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
+        System.out.println("Queue: " + queue);
+    }
+}

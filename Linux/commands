@@ -1,0 +1,114 @@
+file cmnds
+------------------------------------------------------------------------------
+scp - secure copy
+scp <localfile> <remoreuser>@<remotemachine>:<remotepath> - local to remote copy
+scp <remoteuser>@<remotemachine>:<remotepath> - remote to local cophy
+
+wget - dobwload file from server to computer
+wget <filedownload path url>
+
+process managemnt
+-----------------------------------------------------------------------------
+ps/top - to get running process
+ps -aux  - it will give snapshot, to get list refresh itself by top cmnd
+
+kill - to kill the running task, ps id will get ps cmnd; kill <pid>
+
+service - manager servercies
+service --status-all   to print list of services
+service <service_name> status - to print detaus status of a service
+sudo service <servicename> restart/stop - to restart/stop service
+
+
+mount &unmont
+-------------------------------------------------------
+lsblk/fdisk - to list block devices n manipulate dispartitions
+sudo mount <partitontomount> <localmountignpoint> - sudo mount dev/sda2  /mnt
+sudo unmount <localmountingpoint>
+
+filter
+--------------------------------
+grep - aloows to search specific char/string...; ls -l | grep ".*.py$" - to filer only py files
+
+run prog in bacground - program &
+------------------------------------------
+
+write to n read from files
+------------------------------------------
+ls -l | grep ".*py$" > filename.txt
+cat filename
+grep "word" < filename
+
+
+run multiple cmnds at a time - separate with ;
+--------------------------------------
+and conditons a||b, a&&b - regular expression
+
+head&tail
+-------------------------
+-n -  lines
+-c - byetes
+-q - quiet - print files content without mentioning file name when multiple files printed
+-v - verbose - print file names along with content
+-f - log entries written by running prgs
+
+/etc - config files
+swtching users - sudo username
+wc - word count
+wc -l : Prints the number of lines in a file.
+wc -w : prints the number of words in a file.
+wc -c : Displays the count of bytes in a file.
+wc -m : prints the count of characters from a file.
+wc -L : prints only the length of the longest line in a file.
+
+basic and general commands
+-----------------------------------------------------------------------------
+~$ pwd-to know the current dir
+ls-list of files in current dir, for hidden files ls -a
+cd -
+cd <dir>(*casesensitive),
+for white space in filename abc xyz - cd <abc/xyz>
+for go to home dir cd
+for go back to folder cd..
+mkdir - to create dir, for whiter space use /
+rmdir - to delete empty dir, for delete dire containing files rm
+rm -r - to just delete dir
+touch - to create file touch <filename.format>
+man & -help  - shows how to use and more about command,
+man cd shows manual pages of cmnd; cd -help shows how to use it
+cp - copy; cp <file.format> <path>
+mv - move r rename; mv <filename> <filename>
+locate - to search file; -i to ignore casesensitive; locate -i <filename>; if whitespace use *
+echo - to keep data to file; echo sampledatatext.....abc>>filename
+cat - to view the data in the file; cat filename
+nano,vj,jed - text ediotrs with colors
+sudo - super user do; needed "sudo passwd" cmnd for to set root pswd
+sudo bash/ su - to enter into root cmnd line (it displays path from root)
+df - for disk space, for megabytes -m; df -m; for file usage df filename
+du - dis usage of folder du foldername
+ls -lah - to files sizes in folder
+tar - compress/uncompress tar archieves;
+for creating .tar archive - tar -cvf
+for untar - tar -xvf
+for list contents  - tar -tvf
+zip & unzip - zip archieves
+uname -a - to print the system details like kernla,version,date release, process typee
+apt-get - to work with packages install/update/upgrade required root previliges
+sudo apt-get install package
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade; distro
+apt-cache search - to search pkg
+chmod - to make file executable and to change permissions; sudo chmod +x filename
+chmod +rwx
+chmod -rwx
+chmod +x filename to allow executable permissions.
+chmod -wx filename to take out write and executable permissions.
+hostname - hostname -I; i for ipadress
+ping - to check connection to a server; ping google.com
+clear  - clear ternimal
+cntl+c - stop cmnd in terminal safely
+cntl+z - force stop
+exit - exit terminal
+sudo halt & sudo reboot - poweroff and reboot
+TAB - to fill the terminal; cd doc > TAB >

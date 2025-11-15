@@ -1,0 +1,65 @@
+// Encapsulation: Encapsulate related data and methods into a single unit (class) and control access to that unit.
+
+// Abstraction: Hide the complex implementation details and show only the essential features of the object.
+
+// Inheritance: Allows a class to inherit properties and behavior from another class.
+
+// Polymorphism: Refers to the ability of a method to do different things based on the object that it is acting upon.
+
+// Let's create a simple program demonstrating these concepts:
+
+// Encapsulation: We'll create a Car class which encapsulates the properties and behavior of a car.
+
+class Car {
+    private String brand;
+    private String model;
+    private int year;
+
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    public void displayDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Inheritance: We'll create a subclass ElectricCar which inherits from the Car class.
+
+class ElectricCar extends Car {
+    private int batteryCapacity;
+
+    public ElectricCar(String brand, String model, int year, int batteryCapacity) {
+        super(brand, model, year);
+        this.batteryCapacity = batteryCapacity;
+    }
+
+    @Override
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("Battery Capacity: " + batteryCapacity + " kWh");
+    }
+}
+
+// Polymorphism: We'll create a method that accepts both Car and ElectricCar objects and demonstrates polymorphic behavior.
+
+class CarDisplay {
+    public static void displayCarDetails(Car car) {
+        car.displayDetails();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car1 = new Car("Toyota", "Camry", 2022);
+        ElectricCar car2 = new ElectricCar("Tesla", "Model S", 2023, 100);
+
+        // Abstraction: We interact with the Car and ElectricCar objects without knowing their internal implementations.
+        CarDisplay.displayCarDetails(car1);
+        CarDisplay.displayCarDetails(car2);
+    }
+}

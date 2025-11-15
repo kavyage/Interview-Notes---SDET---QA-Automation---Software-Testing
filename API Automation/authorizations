@@ -1,0 +1,5 @@
+API authentication and authorization are to ensure security
+
+Authentication - verifying the identity to access the API, usually via tokens, API keys, OAuth, or basic auth. eg., user credentials
+
+Authorization - permission eg., user level permissions

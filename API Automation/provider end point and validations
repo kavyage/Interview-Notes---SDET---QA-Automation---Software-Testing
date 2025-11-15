@@ -1,0 +1,12 @@
+GET /users/{id} → provider endpoint to get user info
+POST /users → provider endpoint to create a use
+public void validateProviderEndpoint() {
+        RestAssured.baseURI = "https://api.example.com";
+        given()
+            .header("Authorization", "Bearer <token>")
+        .when()
+            .get("/provider/endpoint")
+        .then()
+            .statusCode(200)
+            .body("data.id", notNullValue())
+            .body("data.name", equalTo("expectedName")); }
