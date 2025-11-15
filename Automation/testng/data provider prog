@@ -1,0 +1,17 @@
+public class LoginTest {
+
+    @DataProvider(name = "loginData")
+    public Object[][] getData() {
+        return new Object[][] {
+            {"admin", "admin123"},
+            {"user", "user123"},
+            {"guest", "guest123"}
+        };
+    }
+
+    @Test(dataProvider = "loginData")
+    public void testLogin(String username, String password) {
+        System.out.println("Testing login with: " + username + " / " + password);
+        // Add login logic and assertions here
+    }
+}
